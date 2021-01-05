@@ -11,7 +11,8 @@ GraphNode::~GraphNode()
     //// STUDENT CODE
     ////
 
-    delete _chatBot; 
+    // Node has no ownership of the memory allocation of _chatbot, so no delete here:
+    // delete _chatBot; 
 
     ////
     //// EOF STUDENT CODE
