@@ -1,0 +1,4 @@
+membot
+*.o
+build/*
+*.json
