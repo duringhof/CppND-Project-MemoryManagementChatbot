@@ -11,6 +11,8 @@
 // constructor WITHOUT memory allocation
 ChatBot::ChatBot()
 {
+    std::cout << "ChatBot Constructor WITHOUT memory allocation" << std::endl;
+
     // invalidate data handles
     _image = nullptr;
     _chatLogic = nullptr;
@@ -50,6 +52,8 @@ ChatBot::~ChatBot()
 
 void ChatBot::ReceiveMessageFromUser(std::string message)
 {
+    std::cout << "ChatBot ReceiveMessageFromUser method called" << std::endl;
+  
     // loop over all edges and keywords and compute Levenshtein distance to query
     typedef std::pair<GraphEdge *, int> EdgeDist;
     std::vector<EdgeDist> levDists; // format is <ptr,levDist>
@@ -84,6 +88,8 @@ void ChatBot::ReceiveMessageFromUser(std::string message)
 
 void ChatBot::SetCurrentNode(GraphNode *node)
 {
+    std::cout << "ChatBot SetCurrentNode method called" << std::endl;
+  
     // update pointer to current node
     _currentNode = node;
 
@@ -99,6 +105,8 @@ void ChatBot::SetCurrentNode(GraphNode *node)
 
 int ChatBot::ComputeLevenshteinDistance(std::string s1, std::string s2)
 {
+    std::cout << "ChatBot ComputeLevenshteinDistance method called" << std::endl;
+  
     // convert both strings to upper-case before comparing
     std::transform(s1.begin(), s1.end(), s1.begin(), ::toupper);
     std::transform(s2.begin(), s2.end(), s2.begin(), ::toupper);
