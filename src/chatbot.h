@@ -7,8 +7,8 @@
 class GraphNode; // forward declaration
 class ChatLogic; // forward declaration
 
-class ChatBot
-{
+class ChatBot {
+  
 private:
     // data handles (owned)
     wxBitmap *_image; // avatar image
