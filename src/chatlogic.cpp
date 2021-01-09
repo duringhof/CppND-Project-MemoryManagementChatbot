@@ -129,13 +129,9 @@ void ChatLogic::LoadAnswerGraphFromFile(std::string filename) {
                             (*childNode)->AddEdgeToParentNode(edge.get());
                             (*parentNode)->AddEdgeToChildNode(std::move(edge));
                         }
-
-                        ////
-                        //// EOF STUDENT CODE
                     }
                 }
-                else
-                {
+                else {
                     std::cout << "Error: ID missing. Line is ignored!" << std::endl;
                 }
             }
@@ -150,9 +146,6 @@ void ChatLogic::LoadAnswerGraphFromFile(std::string filename) {
         return;
     }
 
-    //// STUDENT CODE
-    ////
-
     // identify root node
     GraphNode *rootNode = nullptr;
     for (auto it = std::begin(_nodes); it != std::end(_nodes); ++it) {
@@ -162,7 +155,7 @@ void ChatLogic::LoadAnswerGraphFromFile(std::string filename) {
 
           if (rootNode == nullptr) {
             
-                rootNode = (*it).get(); // assign current node to root
+                rootNode = it->get(); // assign current node to root
           } else {
             
                 std::cout << "ERROR : Multiple root nodes detected" << std::endl;
@@ -170,7 +163,6 @@ void ChatLogic::LoadAnswerGraphFromFile(std::string filename) {
         }
     }
     
-
     // create instance of chatbot
     ChatBot chatBot("../images/chatbot.png");
 
