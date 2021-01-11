@@ -6,7 +6,7 @@ The repository you're looking at originates from [this Udacity starter code repo
 
 ## Basic Build Instructions
 
-(0. Review the desciption of dependencies that can be found [here](https://github.com/udacity/CppND-Memory-Management-Chatbot.git)!)
+0. ( Review the desciption of dependencies that can be found [here](https://github.com/udacity/CppND-Memory-Management-Chatbot.git)! )
 1. Clone this repo.
 2. Make a build directory in the top level directory: `mkdir build && cd build`
 3. Compile: `cmake .. && make`
